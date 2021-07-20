@@ -17,4 +17,9 @@ public class NotificationGatewayApi {
     public NotificationGatewayResponse sendNotification(@RequestBody NotificationGatewayRequest request) {
         return gatewayService.sendNotification(request);
     }
+
+    @GetMapping("/healthcheck")
+    public String healthCheck (){
+        return "UP";
+    }
 }
